@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "com.uac.grpc";
+
+service user{
+	rpc operacion(Resultado) returns(APIResponse);
+}
+
+message Resultado {
+	int32 numeroUno = 1;
+	int32 numeroDos = 2;
+	int32 operacion = 3;
+}
+message APIResponse{
+	string respuesta = 1;
+	int32 responseCode = 2;
+	}
