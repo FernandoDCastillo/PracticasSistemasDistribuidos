@@ -301,12 +301,12 @@ public class Chat1 extends javax.swing.JFrame implements Runnable {
                 ObjectInputStream entrada = new ObjectInputStream(s.getInputStream());
                 recibido = (Paquete) entrada.readObject();
 
-                if (recibido.getMensaje().equals("online")) {
+                if (recibido.getMensaje().equals("7/2*ghg456Z")) {
                     modeloList.addElement(recibido.getUsuario());
                     contactos.add(recibido.getIp());
                     contactosNick.add(recibido.getUsuario());
                 }
-                if (recibido.getMensaje().equals("offline")) {
+                if (recibido.getMensaje().equals("2ñs*ñsfd/45*E")) {
                     modeloList.removeAllElements();
                     this.jListContactos.repaint();
                     for (int i = 0; i < contactos.size(); i++) {
@@ -320,7 +320,7 @@ public class Chat1 extends javax.swing.JFrame implements Runnable {
                     }
 
                 }
-                if ((!recibido.getMensaje().equals("online")) && (!recibido.getMensaje().equals("offline"))) {
+                if ((!recibido.getMensaje().equals("7/2*ghg456Z")) && (!recibido.getMensaje().equals("2ñs*ñsfd/45*E"))) {
                     SimpleAttributeSet attrs = new SimpleAttributeSet();
                     textoAzul(attrs, jTextPaneMensajes, recibido.getUsuario() + ":          " + recibido.getMensaje());
                     nuevaLinea(jTextPaneMensajes);
